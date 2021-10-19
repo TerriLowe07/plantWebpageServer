@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="=UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/leaf.ico') }}">
+    <script src=""></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <nav>
+                <div class="navlist">
+                    <ul>
+                        <div id="logo"><img src="{{ url_for('static', filename='img/logo_white1.png') }}" alt="logo">
+                    </ul>
+
+                    </div>
+                    <a href="/"><span class="icon fas fa-home"></span></a>
+
+                </div>
+            </nav>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <img class="topBox" src="{{ url_for('static', filename='img/main1.jpg') }}" width="1000px">
+        </section>
+
+        <section>
+            <h1>Contact</h1>
+            <h3>If you'd like to get in touch about a project, please leave me a message using the form below!</h3>
+        </section>
+
+        <main>
+
+            <form action="submit_form" method="POST">
+
+                <label for="fullName">Your Name: </label><input type="text" name="fullName" id="fullName"><br>
+
+                <label for="email">Email: </label><input type="email" name="email" id="email"><br>
+
+                <label for="msg">Message: </label><textarea name="msg" id="msg"></textarea><br>
+
+                <div class="checks"><input type="checkbox" name="copyEmail" id="copyEmail">
+                    <label for="copyEmail">Send a copy to my email</label><br>
+                </div>
+                <input type="submit" id="submit" value="Send">
+                <input type="reset" id="reset"><br><br>
+
+            </form>
+    </div>
+    </div>
+    </main>
+    <footer>
+        <div class="col item social">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/?lang=en-gb" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></i></a>
+        </div>
+        <img src="{{ url_for('static', filename='img/logo_transparent.png') }}" alt="Logo" height="80px">
+        </div>
+        <p class="copyright">Toozap 2021 © </p>
+        </div>
+    </footer>
+</body>
+
+</html>
